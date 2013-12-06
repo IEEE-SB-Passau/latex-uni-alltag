@@ -3,9 +3,11 @@
 \IfFileExists{beamerthemesl-it.sty}{%
   \usetheme{sl-it}
   \useoutertheme{sl-split}
+  \usepackage{sl-listings}
 }{%
   \usetheme{Luebeck}
   \usepackage{babel}
+  \usepackage{listings}
 }
 \usepackage[backend=biber%
   ,language=german]{biblatex}
@@ -20,6 +22,13 @@
 \else%
   \usepackage[utf8]{inputenc}%
 \fi
+
+\newcommand\examplefile[2]{%
+  \footnotesize\centering%
+  \href{#2}{%
+    \includegraphics[height=.75\baselineskip]{examplefile}~\textsl{#1}%
+  }
+}
 
 \author{Stephan Lukasczyk}
 \title{\LaTeX{} im Uni-Alltag}
@@ -111,7 +120,7 @@
   \endgroup
 \end{frame}
 
-% Fehlermeldungen
+\input{chapters/errors.tex}
 % Graphiken
 % Präsentationen
 
