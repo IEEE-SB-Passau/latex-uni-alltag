@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[paperwidth=12.8cm,paperheight=9.6cm,margin=0pt]{geometry}
+\usepackage{pstricks}
+\usepackage{graphicx}
+\usepackage{hologo}
+\usepackage{tgadventor}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\begin{document}
+
+\begin{pspicture}(0,0)(11.5,9)
+  \rput(7,4){%
+    \huge
+    \color{red}
+    \rotatebox{0}{\hologo{(La)TeX}}
+  }
+  \rput(8,2){%
+    \large
+    \color{green}
+    \rotatebox{30}{\hologo{AmSLaTeX}}
+  }
+  \rput(8,6){%
+    \LARGE
+    \color{blue}
+    \rotatebox{15}{\hologo{BibTeX}}
+  }
+  \rput(2,2){%
+    \Large
+    \color{cyan}
+    \rotatebox{45}{\hologo{ConTeXt}}
+  }
+  \rput(4,2.5){%
+    \large
+    \color{magenta}
+    \rotatebox{0}{\hologo{eTeX}}
+  }
+  \rput(5,2.9){%
+    \LARGE
+    \color{yellow}
+    \rotatebox{330}{\hologo{KOMAScript}}
+  }
+  \rput(2,6.5){%
+    \huge
+    \color{red}
+    \rotatebox{345}{\hologo{LaTeX2e}}
+  }
+  \rput(10,6){%
+    \LARGE
+    \color{green}
+    \rotatebox{315}{\hologo{LuaTeX}}
+  }
+  \rput(10,3.5){%
+    \Large
+    \color{blue}
+    \rotatebox{90}{\hologo{METAFONT}}
+  }
+  \rput(2,5){%
+    \large
+    \color{cyan}
+    \rotatebox{270}{\hologo{METAPOST}}
+  }
+  \rput(4.5,6.5){%
+    \Huge
+    \color{magenta}
+    \rotatebox{45}{\hologo{pdfTeX}}
+  }
+  \rput(6,6){%
+    \LARGE
+    \color{yellow}
+    \rotatebox{315}{\hologo{XeLaTeX}}
+  }
+\end{pspicture}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% coding: utf-8
+%%% TeX-engine: latex
+%%% TeX-PDF-mode: nil
+%%% End:
