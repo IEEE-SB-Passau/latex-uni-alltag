@@ -12,6 +12,7 @@
 \addbibresource{biblio.bib}
 \usepackage{csquotes}
 \usepackage{hologo}
+\usepackage{tikz}
 \usepackage{graphicx}
 \graphicspath{{./img/}}
 \usepackage{ifluatex}
@@ -28,9 +29,15 @@
   IEEE Student Branch Passau}
 \begin{document}
 
-\begin{frame}
-  \titlepage
-\end{frame}
+{\usebackgroundtemplate{%
+    \tikz\node[opacity=0.3]{%
+      \includegraphics[height=\paperheight,width=\paperwidth]{lion}%
+    };%
+  }
+  \begin{frame}
+    \titlepage
+  \end{frame}
+}
 
 \begin{frame}
   \frametitle{Agenda}
@@ -107,6 +114,23 @@
 % Fehlermeldungen
 % Graphiken
 % Präsentationen
+
+{\usebackgroundtemplate{%
+  \tikz\node[opacity=0.3]{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{tex-background}%
+  };%
+}
+\begin{frame}
+  \frametitle{The End\dots}
+  \begin{textblock}{10}(0.3,0.4)
+    {\Huge\color{red}Happy \TeX-ing!}
+  \end{textblock}
+  \begin{textblock}{10}(0.1,0.88)
+    \small All files available at
+    \href{https://github.com/sl-gap/tex-tutorial/}{https://github.com/sl-gap/tex-tutorial/}
+  \end{textblock}
+\end{frame}
+}
 
 \end{document}
 
