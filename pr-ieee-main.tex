@@ -1,5 +1,6 @@
-\documentclass[t,ngerman,professionalfont]{beamer}
+\documentclass[t,ngerman]{beamer}
 \listfiles
+\usefonttheme{professionalfonts}
 \IfFileExists{beamerthemesl-it.sty}{%
   \usetheme{sl-it}
   \useoutertheme{sl-split}
@@ -32,21 +33,18 @@
 
 \author{Stephan Lukasczyk}
 \title{\LaTeX{} im Uni-Alltag}
-\subtitle{Ein \enquote{kleiner} Überblick}
+\subtitle{Ein \enquote{kleiner} \"Uberblick}
 \date{15.~Januar 2014}
 \institute{\includegraphics[width=3cm]{ieee-logo}\\%
   IEEE Student Branch Passau}
 \begin{document}
 
-{\usebackgroundtemplate{%
-    \tikz\node[opacity=0.3]{%
-      \includegraphics[height=\paperheight,width=\paperwidth]{lion}%
-    };%
-  }
-  \begin{frame}
-    \titlepage
-  \end{frame}
-}
+\begin{frame}
+  \titlepage
+  \begin{textblock}{4}(0.67,0.4)
+    \includegraphics[width=4cm]{lion}
+  \end{textblock}
+\end{frame}
 
 \begin{frame}
   \frametitle{Agenda}
