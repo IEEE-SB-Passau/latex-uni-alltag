@@ -1,16 +1,30 @@
 \section{(Kryptische) Fehlermeldungen}
 
+\subsection{Mathemodus}
+
 \begin{frame}[fragile]
   \frametitle{Zeichen mit besonderer Bedeutung}
-  \begin{columns}[t]
+  \only<1->{%
+  \begin{columns}[T]
     \begin{column}{.5\textwidth}
-      \examplefile{examples/underscore}{asdf}
+      \examplefile{examples/underscore.tex}{https://github.com/sl-gap/tex-tutorial/blob/master/examples/errors/underscore.tex}
       \lstinputlisting[language={[LaTeX]TeX}]{examples/errors/underscore.tex}
     \end{column}
     \begin{column}{.5\textwidth}
-      Bla
+      Fehlermeldung:
+      \lstinputlisting{examples/errors/underscore.err}
     \end{column}
   \end{columns}
+  }% End of \only<1->
+  \only<2->{%
+    \begin{itemize}
+    \item Fehler wegen \texttt{\color{red}\_}
+    \item Startet automatisch Mathemodus\\
+      $\Rightarrow$ fehlendes \texttt{\$} am Ende
+    \item Lösung: \texttt{\color{red}\textbackslash\_} 
+    \end{itemize}
+
+  }% End of \only<2->
 \end{frame}
 %%% Local Variables: 
 %%% mode: latex
