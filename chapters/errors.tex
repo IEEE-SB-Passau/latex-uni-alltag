@@ -1,5 +1,87 @@
 \section{(Kryptische) Fehlermeldungen}
 
+\subsection{Übliche Fehler}
+
+\begin{frame}
+  \frametitle{Tippfehler}
+  \only<1->{%
+    \begin{columns}[T]
+      \begin{column}{.5\textwidth}
+        \examplefile{examples/errors/typo.tex}{https://github.com/sl-gap/tex-tutorial/blob/master/examples/errors/typo.tex}
+        \lstinputlisting[language={[LaTeX]TeX}]{examples/errors/typo.tex}
+      \end{column}
+      \begin{column}{.5\textwidth}
+        Fehlermeldung:
+        \lstinputlisting{examples/errors/typo.err}
+      \end{column}
+    \end{columns}
+  }% End of \only<1->
+  \only<2->{%
+    \begin{itemize}
+    \item Wahrscheinlich häufigster Fehler
+    \item Tippfehler im Kommandonamen
+    \item Kommando nicht definiert?
+    \end{itemize}
+    \begin{tikzpicture}[overlay]
+      \draw[color=red,very thick] (2.85,3.3) circle (8pt);
+    \end{tikzpicture}
+  }
+\end{frame}
+
+% \begin{frame}
+%   \frametitle{Undefinierte Zeichen}
+%   \only<1->{%
+%     \begin{columns}[T]
+%       \begin{column}{.5\textwidth}
+%         \examplefile{examples/errors/undef-char.tex}{https://github.com/sl-gap/tex-tutorial/blob/master/examples/errors/undef-char.tex}
+%         \lstinputlisting[language={[LaTeX]TeX},inputencoding=utf8,extendedchars=true]{examples/errors/undef-char.tex}
+%       \end{column}
+%       \begin{column}{.5\textwidth}
+%         Fehlermeldung:
+%         \lstinputlisting{examples/errors/undef-char.err}
+%       \end{column}
+%     \end{columns}
+%   }% End of \only<1->
+%   \only<2->{%
+%     \begin{itemize}
+%     \item Wahrscheinlich häufigster Fehler
+%     \item Tippfehler im Kommandonamen
+%     \item Kommando nicht definiert?
+%     \end{itemize}
+%     \begin{tikzpicture}[overlay]
+%       \draw[color=red,very thick] (2.85,3.3) circle (8pt);
+%     \end{tikzpicture}
+%   }
+% \end{frame}
+
+\begin{frame}
+  \frametitle{Überschreiben eines vorhandenen Kommandos}
+    \begin{columns}[T]
+      \only<1->{\begin{column}{.5\textwidth}
+        \examplefile{examples/errors/renewcommand.tex}{https://github.com/sl-gap/tex-tutorial/blob/master/examples/errors/renewcommand.tex}
+        \lstinputlisting[language={[LaTeX]TeX}]{examples/errors/renewcommand.tex}
+      \end{column}}
+      \only<1>{\begin{column}{.5\textwidth}
+        Fehlermeldung:
+        \lstinputlisting{examples/errors/renewcommand.err}
+      \end{column}}
+      \only<2->{\begin{column}{.5\textwidth}
+        Fehlermeldung:
+        \lstinputlisting[lastline=3]{examples/errors/renewcommand.err}
+        \end{column}}
+    \end{columns}
+  \only<2->{%
+    \begin{itemize}
+    \item Kommando schon definiert
+    \item Überschreiben mit \texttt{\textbackslash renewcommand}\\
+      \alert{Vorsicht!} Nur wenn man wirklich weiß, was man tut!
+    \end{itemize}
+    \begin{tikzpicture}[overlay]
+      \draw[color=red,very thick] (0,4.35) circle (8pt);
+    \end{tikzpicture}
+  }
+\end{frame}
+
 \subsection{Mathemodus}
 
 \begin{frame}[fragile]
