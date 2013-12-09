@@ -1,0 +1,104 @@
+! Argument of \align* has an extra }.
+<inserted text> 
+                \par 
+l.5   A &= \{z\in\mathbb{Z}:z<0}
+                                \\
+Runaway argument?
+ A &= \{z\in \mathbb {Z}:z<0
+! Paragraph ended before \align* was complete.
+<to be read again> 
+                   \par 
+l.5   A &= \{z\in\mathbb{Z}:z<0}
+                                \\
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5   A &= \{z\in\mathbb{Z}:z<0}
+                                \\
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.5   A &= \{z\in\mathbb{Z}:z<0}
+                                \\
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.5   A &= \{z\in\mathbb{Z}:z<0}
+                                \\
+! Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.5   A &= \{z\in\mathbb{Z}:z<0}
+                                \\
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6   &
+       = \mathbb{Z}\setminus\mathbb{N}
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.6   &
+       = \mathbb{Z}\setminus\mathbb{N}
+
+! LaTeX Error: \mathbb allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6   &= \mathbb
+                {Z}\setminus\mathbb{N}
+! Missing $ inserted.
+<inserted text> 
+                $
+l.6   &= \mathbb{Z}\setminus
+                            \mathbb{N}
+! Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.7 \end{align*}
+                
+! Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.7 \end{align*}
+                
+! Missing $ inserted.
+<inserted text> 
+                $
+l.7 \end{align*}
+                
+! Missing } inserted.
+<inserted text> 
+                }
+l.7 \end{align*}
+                
+! Extra }, or forgotten \endgroup.
+\math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
+                                                  
+l.7 \end{align*}
+                
+! Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.7 \end{align*}
+                
+! Extra }, or forgotten \endgroup.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.7 \end{align*}
+                
+! Missing $ inserted.
+<inserted text> 
+                $
+l.7 \end{align*}
+                
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.7 \end{align*}

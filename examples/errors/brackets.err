@@ -1,0 +1,3 @@
+! Extra }, or forgotten $.
+l.4 \[ A = \{x\in\mathbb{N}:x<10}
+                               \]
