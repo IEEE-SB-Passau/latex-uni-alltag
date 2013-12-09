@@ -23,7 +23,39 @@
       $\Rightarrow$ fehlendes \texttt{\$} am Ende
     \item Lösung: \texttt{\color{red}\textbackslash\_} 
     \end{itemize}
+    \begin{tikzpicture}[overlay]
+      \draw[color=red,very thick] (3.9,4.5) circle (8pt);
+      \draw[color=red,very thick,->] (3.3,2.6) .. controls (3.7,3) .. (3.9,4.1);
+    \end{tikzpicture}
+  }% End of \only<2->
+\end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{Klammerchaos}
+  \only<1->{%
+    \begin{columns}[T]
+      \begin{column}{.5\textwidth}
+        \examplefile{examples/leftright.tex}{https://github.com/sl-gap/tex-tutorial/blob/master/examples/errors/leftright.tex}
+        \lstinputlisting[language={[LaTeX]TeX}]{examples/errors/leftright.tex}
+      \end{column}
+      \begin{column}{.5\textwidth}
+        Fehlermeldung:
+        \lstinputlisting{examples/errors/leftright.err}
+      \end{column}
+    \end{columns}
+  }% End of \only<1->
+  \only<2->{%
+    \begin{itemize}
+    \item Fehlendes \texttt{\color{red}\textbackslash right}
+    \item Öffnend und schließend muss vorhanden sein
+    \item \texttt{\color{red}\textbackslash right.} zur Unterdrückung
+      der Klammer
+    \item natürlich auch mit \texttt{\textbackslash left}\dots
+    \end{itemize}
+    \begin{tikzpicture}[overlay]
+      \draw[color=red,very thick] (3.1,3.65) circle (8pt);
+      \draw[color=red,very thick,->] (3.8,2) .. controls (4,2.5) .. (3.3,3.3);
+    \end{tikzpicture}
   }% End of \only<2->
 \end{frame}
 %%% Local Variables: 
