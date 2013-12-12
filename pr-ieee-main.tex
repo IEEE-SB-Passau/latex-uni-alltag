@@ -18,15 +18,11 @@
 \usepackage{tikz}
 \usepackage{graphicx}
 \graphicspath{{./img/}}
-\usepackage{ifluatex}
-\ifluatex%
-\else%
-  \usepackage[utf8]{inputenc}%
-\fi
+\usepackage{luamplib}
 
-\newcommand\examplefile[2]{{%
+\newcommand\examplefile[1]{{%
   \footnotesize%
-  \href{#2}{%
+  \href{https://github.com/sl-gap/tex-tutorial/blob/master/#1}{%
     \includegraphics[height=.75\baselineskip]{examplefile}~\textsl{#1}%
   }}
 }
@@ -50,6 +46,19 @@
   \begin{textblock}{4}(0.67,0.4)
     \includegraphics[width=4cm]{lion}
   \end{textblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Motivation}
+  \begin{itemize}
+  \item Standard für wissenschaftliche Publikationen in der Informatik
+  \item Plattformunabhängig
+  \item Quellfiles sind Plaintext, Ausgabe immer gleich\\
+    $\Rightarrow$ gut für Versionsverwaltung, Teams etc.
+  \item Professionelles Ergebnis
+  \item Oft Voraussetzung für SEP, Bachelor-/Masterarbeit,
+    Seminararbeit etc.
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -129,8 +138,19 @@
 \end{frame}
 
 \input{chapters/errors.tex}
+\input{chapters/graphics.tex}
 % Graphiken
 % Präsentationen
+
+\begin{frame}
+  \frametitle{Fazit}
+  \begin{itemize}
+  \item \hologo{(La)TeX} als Tool für alles
+  \item \hologo{(La)TeX} macht Spaß (außer bei Fehlern)
+  \item schier unendliche Möglichkeiten
+  \item \emph{aber} zum Teil hoher Lernaufwand
+  \end{itemize}
+\end{frame}
 
 {\usebackgroundtemplate{%
   \tikz\node[opacity=0.3]{%

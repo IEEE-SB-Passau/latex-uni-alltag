@@ -7,7 +7,7 @@
   \only<1->{%
     \begin{columns}[T]
       \begin{column}{.5\textwidth}
-        \examplefile{examples/errors/typo.tex}{https://github.com/sl-gap/tex-tutorial/blob/master/examples/errors/typo.tex}
+        \examplefile{examples/errors/typo.tex}
         \lstinputlisting[language={[LaTeX]TeX}]{examples/errors/typo.tex}
       \end{column}
       \begin{column}{.5\textwidth}
@@ -32,7 +32,7 @@
   \frametitle{Überschreiben eines vorhandenen Kommandos}
     \begin{columns}[T]
       \only<1->{\begin{column}{.5\textwidth}
-        \examplefile{examples/errors/renewcommand.tex}{https://github.com/sl-gap/tex-tutorial/blob/master/examples/errors/renewcommand.tex}
+        \examplefile{examples/errors/renewcommand.tex}
         \lstinputlisting[language={[LaTeX]TeX}]{examples/errors/renewcommand.tex}
       \end{column}}
       \only<1>{\begin{column}{.5\textwidth}
@@ -63,7 +63,7 @@
   \only<1->{%
   \begin{columns}[T]
     \begin{column}{.5\textwidth}
-      \examplefile{examples/errors/underscore.tex}{https://github.com/sl-gap/tex-tutorial/blob/master/examples/errors/underscore.tex}
+      \examplefile{examples/errors/underscore.tex}
       \lstinputlisting[language={[LaTeX]TeX}]{examples/errors/underscore.tex}
     \end{column}
     \begin{column}{.5\textwidth}
@@ -90,7 +90,7 @@
   \only<1->{%
     \begin{columns}[T]
       \begin{column}{.5\textwidth}
-        \examplefile{examples/errors/leftright.tex}{https://github.com/sl-gap/tex-tutorial/blob/master/examples/errors/leftright.tex}
+        \examplefile{examples/errors/leftright.tex}
         \lstinputlisting[language={[LaTeX]TeX}]{examples/errors/leftright.tex}
       \end{column}
       \begin{column}{.5\textwidth}
@@ -118,7 +118,7 @@
   \only<1->{%
     \begin{columns}[T]
       \begin{column}{.5\textwidth}
-        \examplefile{examples/errors/brackets.tex}{https://github.com/sl-gap/tex-tutorial/blob/master/examples/errors/brackets.tex}
+        \examplefile{examples/errors/brackets.tex}
         \lstinputlisting[language={[LaTeX]TeX}]{examples/errors/brackets.tex}
       \end{column}
       \begin{column}{.5\textwidth}
@@ -142,7 +142,7 @@
 \begin{frame}
   \frametitle{Klammerchaos (3) – \texttt{align} sei Dank}
   \only<1>{%
-  \examplefile{examples/errors/align.tex}{https://github.com/sl-gap/tex-tutorial/blob/master/examples/errors/align.tex}
+  \examplefile{examples/errors/align.tex}
   \lstinputlisting[language={[LaTeX]TeX}]{examples/errors/align.tex}
   \begin{itemize}
   \item Gleicher Fehler wie eben (Zeile 5)
@@ -170,12 +170,26 @@
   }
   \only<8>{%
     \lstinputlisting[firstline=99,firstnumber=99]{examples/errors/align.err}
-    \begin{itemize}
-    \item \alert{What the \dots}
-    \item \LaTeX-Fehlermeldungen sind (manchmal) \enquote{etwas}
-      kompliziert 
-    \end{itemize}
+    \alert{What the \dots}
   }
+\end{frame}
+
+\begin{frame}
+  \frametitle{(Kryptische) Fehlermeldungen}
+  \framesubtitle{Ein Fazit}
+  \begin{itemize}
+  \item \LaTeX-Fehlermeldungen (manchmal) \enquote{etwas}
+      kompliziert
+  \item Meldung lesen, Code anschauen
+  \item Auskommentieren (mit \texttt{\%})
+  \item Übersicht im \LaTeX{} Companion
+  \item Weitere Hilfe
+    \begin{itemize}
+    \item Internet-Recherche
+    \item Mailinglisten (texhax, TEX-D-L)
+    \item \href{http://tex.stackexchange.com}{TEX.sx}
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
 %%% Local Variables: 
