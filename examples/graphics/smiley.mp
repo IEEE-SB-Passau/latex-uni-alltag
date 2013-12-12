@@ -1,0 +1,10 @@
+beginfig(1);
+    numeric u; u=50pt;
+    pickup pencircle scaled 2pt;
+    draw fullcircle scaled 1u;
+    draw (-.3u,-.1u)..(0,-.3u)..(.3u,-.1u);
+    pickup pencircle scaled 4pt;
+    draw (0,0);
+    pickup pencircle scaled 7pt;
+    draw (-.2u,.2u); draw (.2u,.2u);
+endfig;

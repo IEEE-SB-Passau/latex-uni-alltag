@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage[paperwidth=4.5cm,paperheight=4.5cm,margin=0pt]{geometry}
+\usepackage{pstricks}
+\begin{document}
+\begin{pspicture}(-2,-2)(2,2)
+  \psset{unit=4}
+  \pscircle[linewidth=2pt](0,0){0.5}
+  \pscurve[linewidth=2pt](-.3,-.1)(0,-.3)(.3,-.1)
+  \psdot[linewidth=4pt](0,0)
+  \psdot[linewidth=6pt](-.2,.2)
+  \psdot[linewidth=6pt](.2,.2)
+\end{pspicture}
+\end{document}

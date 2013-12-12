@@ -1,0 +1,125 @@
+\section{Graphiken}
+
+\subsection{Graphiken einbinden}
+
+\begin{frame}
+  \frametitle{Graphiken einbinden}
+  Blubb
+\end{frame}
+
+\subsection{Graphiken erstellen}
+\begin{frame}
+  \frametitle{Graphiken erstellen}
+  Mehrere Möglichkeiten
+  \begin{itemize}
+  \item \hologo{METAPOST}\\
+    basiert auf \hologo{METAFONT}
+  \item PSTricks\\
+    verwendet PostScript für die Graphikerstellung
+  \item Ti\emph{k}Z\\
+    komplett \TeX-basierend
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\hologo{METAPOST}}
+  \begin{columns}[T]
+    \begin{column}{.25\textwidth}
+      \begin{mplibcode}
+beginfig(1);
+    numeric u; u=50pt;
+    pickup pencircle scaled 2pt;
+    draw fullcircle scaled 1u;
+    draw (-.3u,-.1u)..(0,-.3u)..(.3u,-.1u);
+    pickup pencircle scaled 4pt;
+    draw (0,0);
+    pickup pencircle scaled 7pt;
+    draw (-.2u,.2u); draw (.2u,.2u);
+endfig;
+      \end{mplibcode}
+    \end{column}
+    \begin{column}{.75\textwidth}
+      \examplefile{examples/graphics/smiley.mp}
+      \lstinputlisting[language=MetaPost]{examples/graphics/smiley.mp}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\hologo{METAPOST} (2)}
+  \begin{itemize}
+  \item Vorträge von DANTE2013 für Einsteiger:
+    \begin{itemize}
+    \item
+      \href{http://www.dante.de/events/dante2013/Programm/Vortraege/folien-entenmann.pdf}{Walter
+      Entenmann – Graphik mit \hologo{METAPOST}}
+    \item
+      \href{http://www.dante.de/events/dante2013/Programm/Vortraege/folien-voipio.pdf}{Mari
+      Voipio – Entry-Level MetaPost}
+    \end{itemize}
+    \item Übersetzung mit \texttt{mpost smiley.mp}\\
+    $\rightarrow$ \texttt{smiley.1} (ähnlich EPS-Graphik)
+  \item Einbinden mit \texttt{\textbackslash includegraphics}\\
+    Kein \hologo{pdfLaTeX}!  Umweg über PostScript notwendig
+  \item Direkte Verwendung mit \hologo{LuaTeX} (\texttt{\href{http://ctan.org/pkg/luamplib}{CTAN://pkg/luamplib}})
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{PSTricks}
+  \begin{columns}[T]
+    \begin{column}{.25\textwidth}
+      \includegraphics[width=2cm]{smiley-pstricks}
+    \end{column}
+    \begin{column}{.75\textwidth}
+      \examplefile{examples/graphics/smiley-pstricks.tex}
+      \lstinputlisting[language={[LaTeX]TeX}]{examples/graphics/smiley-pstricks.tex}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{PSTricks (2)}
+  \begin{itemize}
+  \item Die Bibel: Herbert Voß – Grafik mit PostScript für \TeX{} und
+    \LaTeX{}
+  \item Übersetzung (um PDF zu erhalten) mit\\
+    \texttt{\$ latex smiley-pstricks.tex}\\
+    \texttt{\$ dvips smiley-pstricks.dvi}\\
+    \texttt{\$ ps2pdf smiley-pstricks.ps}
+  \item Funktioniert \emph{nicht} mit \hologo{LuaTeX}, nur
+    \hologo{LaTeX} und \hologo{XeTeX}
+  \item Über 100~Pakete auf CTAN
+  \item Galerie auf \href{http://pstricks.tug.org}{pstricks.tug.org}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ti\emph{k}Z}
+  \begin{columns}[T]
+    \begin{column}{.25\textwidth}
+      Smiley
+    \end{column}
+    \begin{column}{.75\textwidth}
+      \examplefile{examples/graphics/smiley-pstricks.tex}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ti\emph{k}Z (2)}
+  \begin{itemize}
+  \item Kein Buch, nur PDF-Dokumentation
+  \item Funktioniert mit allen \TeX-Interpretern
+  \item Funktionsumfang ähnlich PSTricks
+  \item Galerie auf \href{http://www.texample.net}{texample.net}
+  \end{itemize}
+\end{frame}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% coding: utf-8
+%%% TeX-engine: luatex
+%%% TeX-PDF-mode: t
+%%% TeX-master: "../pr-ieee-main"
+%%% End: 
