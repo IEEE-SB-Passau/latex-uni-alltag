@@ -4,7 +4,103 @@
 
 \begin{frame}
   \frametitle{Grafiken einbinden}
-  Blubb
+  \begin{itemize}
+  \item Viele Möglichkeiten, oft nicht trivial
+  \item hier Übersicht, weiteres liefert Paketdokumentation
+  \item Häufig verwendete Pakete:
+    \begin{itemize}
+    \item \texttt{graphicx}\\
+      \emph{Der} Standard, eigentlich immer nötig
+    \item \texttt{subfig}\\
+      Möglichkeit Abbildungen zu gruppieren
+    \item \texttt{wrapfig}\\
+      Bilder im Fließtext
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\texttt{graphicx}}
+  \framesubtitle{Grundlagen}
+  \begin{itemize}
+  \item Einbinden \texttt{\textbackslash usepackage\{graphicx\}}
+  \item Zentraler Befehl \texttt{\textbackslash
+      includegraphics[options]\{filename\}}
+  \item Mögliche Werte für \texttt{options}:\\
+    \texttt{width}, \texttt{height}, \texttt{angle}\dots
+  \item Normales Einbinden:
+\begin{lstlisting}[language={[LaTeX]TeX}]
+\begin{figure}[ht]
+  \centering
+  \includegraphics[options]{filename}
+  \caption{Caption text}
+  \label{img:num}
+\end{figure}
+\end{lstlisting}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\texttt{graphicx}}
+  \framesubtitle{Gleitumgebungen}
+  \begin{itemize}
+  \item \texttt{figure} sog. Gleitumgebung
+  \item wird von \TeX{} positioniert
+  \item Positionierungswunsch
+    \begin{itemize}
+    \item \texttt{h}: here
+    \item \texttt{t}: top
+    \item \texttt{b}: bottom
+    \item \texttt{p}: special page
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\texttt{graphicx}}
+  \framesubtitle{Weitere nützliche Befehle}
+  \begin{itemize}
+  \item \texttt{\textbackslash rotatebox\{angle\}\{text\}}\\
+    Rotiert \texttt{text} um Winkel \texttt{angle}
+  \item \texttt{\textbackslash
+      scalebox\{h-scale\}\{v-scale\}\{text\}}\\
+    Bietet die Möglichkeit, den \texttt{text} zu skalieren
+  \item \texttt{\textbackslash reflectbox\{text\}}\\
+    Spiegelt \texttt{text}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\texttt{graphicx}}
+  \framesubtitle{Beispiel}
+  \examplefile{examples/graphics/graphic.tex}
+  \fbox{\includegraphics[width=.9\textwidth]{scr-graphic}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\texttt{subfig}}
+  
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\texttt{wrapfig}}
+  \begin{itemize}
+  \item Grundsätzlicher Code
+\begin{lstlisting}[language={[LaTeX]TeX}]
+\begin{wrapfigure}[lines]{placement}[overhang]{width}
+  <figure>
+\end{wrapfigure}
+\end{lstlisting}
+  \item Seltsame Effekte beim Seitenumbruch
+  \item Empfehlung: Verzichten!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\texttt{wrapfig}}
+  \framesubtitle{Beispiel}
+  \examplefile{examples/graphics/wrapfigure.tex}
+  \fbox{\includegraphics[width=.9\textwidth]{scr-wrapfigure}}
 \end{frame}
 
 \subsection{Grafiken erstellen}
