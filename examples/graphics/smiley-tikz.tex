@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage[paperwidth=4.7cm,paperheight=4.5cm,margin=0pt]{geometry}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \draw [line width=2pt] (0,0) circle (2cm);
+  \draw [line width=2pt] (-1.2,-.4) .. controls (0,-1.2) .. (1.2,-.4);
+  \filldraw [black] (0,0) circle (4pt);
+  \filldraw [black] (-.8,.8) circle (6pt);
+  \filldraw [black] (.8,.8) circle (6pt);
+\end{tikzpicture}
+\end{document}
