@@ -53,15 +53,35 @@
 
 \begin{frame}
   \frametitle{Motivation}
-  \begin{itemize}
-  \item Standard für wissenschaftliche Publikationen in der Informatik
-  \item Plattformunabhängig
-  \item Quellfiles sind Plaintext, Ausgabe immer gleich\\
-    $\Rightarrow$ gut für Versionsverwaltung, Teams etc.
-  \item Professionelles Ergebnis
-  \item Oft Voraussetzung für SEP, Bachelor-/Masterarbeit,
-    Seminararbeit etc.
-  \end{itemize}
+  \begin{columns}[T]
+    \only<1->{%
+      \begin{column}{.55\textwidth}
+        \begin{itemize}
+        \item Standard für wissenschaftliche Publikationen in der
+          Informatik
+        \item Plattformunabhängig
+        \item Quellfiles sind Plaintext, Ausgabe immer gleich\\
+          $\Rightarrow$ gut für Versionsverwaltung, Teams etc.
+        \item Professionelles Ergebnis
+        \item Oft Voraussetzung für SEP, Bachelor-/Masterarbeit,
+          Seminararbeit etc.
+        \item Benötigt Einarbeitungszeit
+        \end{itemize}
+      \end{column}
+    } % End of \only<1->
+    \only<1>{% Just to save the layout possion
+      \begin{column}{.45\textwidth} \end{column}
+    } % Ende of \only<1>
+    \only<2->{%
+      \begin{column}{.45\textwidth}
+        Und natürlich:
+        \href{http://xkcd.com/1301}{%
+          \includegraphics[width=.9\textwidth]{xkcd-fileextensions}~
+          \rotatebox{90}{\tiny http://xkcd.com/1301 (CC-BY-NC 2.5)}
+        }
+      \end{column}
+    } % End of \only<2->
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -134,7 +154,7 @@
 
 \begin{frame}
   \frametitle{Einführungen}
-  \nocite{voss2012,l2short}
+  \nocite{*}
   \begingroup
   \printbibliography[heading=none]
   \endgroup
