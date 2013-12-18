@@ -17,7 +17,33 @@
   \item Automatisierter Buildprozess\\
     Makefile, latexmk, arara
   \item Guter Editor\\\pause
-    Emacs+AUC\TeX+Ref\TeX
+    Emacs+AUC\TeX+Ref\TeX\\
+    (Befehlstemplates, Automatische Compileaufrufe, math. Symbole über
+    Menü mit grafischer Vorschau, Preview von Formeln im Editor,
+    Referenzmanagement mit Ref\TeX)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Buildtools}
+  \begin{itemize}
+  \item Makefile
+    \begin{itemize}
+    \item typisch für UNIX-Welt
+    \item Nicht für \TeX{} entwickelt → oft komplizierte Winkelzüge notwendig
+    \end{itemize}
+  \item Arara
+    (\href{http://ctan.org/pkg/arara}{\texttt{CTAN;//pkg/arara}})
+    \begin{itemize}
+    \item Java-Tool
+    \item Konfiguration über Java
+    \end{itemize}
+  \item latexmk
+    (\href{http://ctan.org/pkg/latexmk}{\texttt{CTAN://pkg/latexmk}})
+    \begin{itemize}
+    \item Perl-Tool
+    \item Code-Überwachung für automatisches Compiling
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
