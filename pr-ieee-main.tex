@@ -3,7 +3,7 @@
 \usefonttheme{professionalfonts}
 \IfFileExists{beamerthemesl-it.sty}{%
   \usetheme{sl-it}
-  \useoutertheme{sl-split}
+%  \useoutertheme{sl-split}
   \usepackage{sl-listings}
 }{%
   \usetheme{Luebeck}
@@ -32,7 +32,7 @@
 
 \AtBeginSection{%
   \begin{frame}<beamer>{Agenda}% beamer, nicht für handout
-    \tableofcontents[currentsection]
+    \tableofcontents[currentsection,hideothersubsections]
   \end{frame}
 }
 
@@ -86,7 +86,7 @@
 
 \begin{frame}
   \frametitle{Agenda}
-  \tableofcontents
+  \tableofcontents[hideallsubsections]
 \end{frame}
 
 \section{Einf\"uhrung}
@@ -183,8 +183,8 @@
 
 \input{chapters/errors.tex}
 \input{chapters/graphics.tex}
-% Graphiken
-% Präsentationen
+\input{chapters/presentations.tex}
+\input{chapters/documents.tex}
 
 \begin{frame}
   \frametitle{Fazit}
