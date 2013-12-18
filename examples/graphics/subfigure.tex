@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{graphicx,subfig,blindtext}
+\begin{document}
+\blindtext
+\begin{figure}[ht]
+  \centering
+  \subfloat[First lion.]{%
+    \includegraphics[width=.35\textwidth]{lion}
+    \label{fig:lion-1}
+  }
+  \subfloat[Second lion.]{%
+    \includegraphics[width=.35\textwidth]{lion}
+    \label{fig:lion-2}
+  }
+  \caption{Two lion pictures}
+  \label{fig:lions}
+\end{figure}
+\blindtext
+\end{document}

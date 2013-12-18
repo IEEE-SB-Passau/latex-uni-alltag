@@ -2,7 +2,53 @@
 
 \begin{frame}
   \frametitle{Präsentationen}
-  
+  \begin{itemize}
+  \item
+  \end{itemize}
+\end{frame}
+
+\subsection{powerdot}
+\begin{frame}
+  \frametitle{\texttt{powerdot}}
+  \begin{itemize}
+  \item Basiert auf PSTricks
+  \item \texttt{latex} → \texttt{dvips} → \texttt{ps2pdf}
+  \item Überschaubarer Funktionsumfang
+  \item Freie Gestaltungsmöglichkeit
+  \item \href{http://ctan.org/pkg/powerdot}{\texttt{CTAN://pkg/powerdot}}
+  \end{itemize}
+  \begingroup
+  \printbibliography[heading=none,keyword=presentation]
+  \endgroup
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\texttt{powerdot}}
+  \framesubtitle{Code-Beispiel}
+  \examplefile{examples/presentations/minimal-powerdot.tex}
+  \lstinputlisting[language={[LaTeX]TeX}]{examples/presentations/minimal-powerdot.tex}
+\end{frame}
+
+\subsection{beamer}
+\begin{frame}
+  \frametitle{\texttt{beamer}}
+  \begin{itemize}
+  \item Basiert auf Ti\emph{k}Z
+  \item Funktinioniert mit allen \TeX-Engines
+  \item Riesiger Funktionsumfang (245~Seiten Dokumentation)
+  \item Layout-Erstellung oft nicht trivial
+  \item \href{http://ctan.org/pkg/beamer}{\texttt{CTAN://pkg/beamer}}
+  \end{itemize}
+  \begingroup
+  \printbibliography[heading=none,keyword=presentation]
+  \endgroup
+\end{frame}
+
+\begin{frame}
+  \frametitle{\texttt{beamer}}
+  \framesubtitle{Code-Beispiel}
+  \examplefile{examples/presentations/minimal-beamer.tex}
+  \lstinputlisting[language={[LaTeX]TeX}]{examples/presentations/minimal-beamer.tex}
 \end{frame}
 %%% Local Variables: 
 %%% mode: latex

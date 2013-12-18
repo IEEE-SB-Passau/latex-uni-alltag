@@ -77,9 +77,30 @@
   \fbox{\includegraphics[width=.9\textwidth]{scr-graphic}}
 \end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{\texttt{subfig}}
+  \begin{itemize}
+  \item Grundsätzlicher Code
+\begin{lstlisting}[language={[LaTeX]TeX}]
+\begin{figure}[ht]
+  \centering
+  \subfloat[Caption1]{<img inclusion code>}
+  \subfloat[Captionn]{<img inclusion code>}
+  \caption{Caption for whole}
+  \label{label-for-whole}
+\end{figure}
+\end{lstlisting}
+  \item Alternativ auch mit \texttt{\textbackslash parbox} oder
+    \texttt{minipage}-Umgebung
+  \item Einsatz selten sinnvoll\dots
+  \end{itemize}
+\end{frame}
+
 \begin{frame}
   \frametitle{\texttt{subfig}}
-  
+  \framesubtitle{Beispiel}
+  \examplefile{examples/graphics/subfigure.tex}
+  \fbox{\includegraphics[width=.9\textwidth]{scr-subfig}}
 \end{frame}
 
 \begin{frame}[fragile]
