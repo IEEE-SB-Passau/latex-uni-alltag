@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{libertine,inconsolata}
+\usepackage{pstricks-add}
+\usepackage[margin=0pt,paperwidth=12cm,paperheight=11cm]{geometry}
+\begin{document}
+
+\psset{framesep=2mm,arrowscale=1.75}
+
+\begin{pspicture}(-1,-0.25)(8,10)
+  \psframe*[linecolor=black!15](1.1,8)(9.5,9.7)
+  \rput(-0.5,9){\rnode{A}{\psshadowbox[fillcolor=blue!30,fillstyle=solid]{Quelltext}}}
+  \uput[180](-0.5,8){\texttt{.tex}}
+  \rput(1,7){\rnode{B}{\psshadowbox[fillcolor=red!30,fillstyle=solid]{pdf\LaTeX}}}
+  \uput[0](1,6.2){\texttt{.bcf}}
+  \ncangle[angleA=-90,angleB=90]{->}{A}{B}
+  %
+  \rput(2.5,9){\rnode{C}{\psshadowbox[fillcolor=green!30,fillstyle=solid]{\texttt{biblatex}}}}
+  \uput[0](1.5,8.25){\texttt{.sty}}
+  \ncangle[angleA=-90,angleB=90,offsetB=0.3]{->}{C}{B}
+  %
+  \rput(8,9){\rnode{D}{\psshadowbox[fillcolor=blue!30,fillstyle=solid]{Bib-Data}}}
+  \uput[0](6.5,8.25){\texttt{.bib}}
+  %
+  \rput(1,4.2){\rnode{B'}{\psshadowbox[fillcolor=red!30,fillstyle=solid]{pdf\LaTeX}}}
+  \ncangle[angleA=-90,angleB=90,offsetB=-0.3]{->}{A}{B'}
+  \ncline{->}{B}{B'}
+  %
+  \uput[0](1,3.5){\texttt{.aux}}
+  \rput(1,2){\rnode{G}{\psshadowbox[fillcolor=red!30,fillstyle=solid]{pdf\LaTeX}}}
+  \ncangle[angleA=-90,angleB=90,offsetB=-0.3]{->}{A}{G}
+  \ncline{->}{B'}{G}
+  \rput(1,0.2){\rnode{H}{\psshadowbox[fillcolor=blue!30,fillstyle=solid]{PDF-Datei}}}
+  \ncline{->}{G}{H}
+  \uput[0](1,1){\texttt{.pdf}}
+  \rput(6,2){\rnode{F}{\psshadowbox[fillcolor=blue!30,fillstyle=solid]{Logdatei}}}
+  \uput[-90](4,1.75){\texttt{.log}}
+  \ncline{->}{G}{F}
+  % Additional
+  \ncangle[angleA=-90,angleB=90,offsetB=0.3]{->}{C}{G}
+  \rput(6.5,6){\rnode{I}{\psshadowbox[fillcolor=green!30,fillstyle=solid]{biber}}}
+  \ncangle[angleA=-90,angleB=180]{->}{B}{I}
+  \psdot(1,6)
+  \psline(7.1,9)(6.5,9)
+  \psline{->}(6.5,9)(6.5,6.4)
+  \rput(5,9){\rnode{J}{\psshadowbox[fillcolor=green!30,fillstyle=solid]{Stil}}}
+  \ncline[angleA=180,angleB=0]{->}{J}{C}
+  \uput[0](4,8.25){\texttt{.bbx/.cbx}}
+  \psline(6.5,5.7)(6.5,5.4)
+  \psline(6.5,5.4)(2.8,5.4)
+  \psline{->}(2.8,5.4)(2.8,8.6)
+  \uput[0](5,5.1){\texttt{.bbl}}
+  %
+  \rput(9,6){\rnode{K}{\psshadowbox[fillcolor=blue!30,fillstyle=solid]{Logdatei}}}
+  \ncline[angleA=0,angleB=180]{->}{I}{K}
+  \uput[-90](7.6,6){\texttt{.blg}}
+\end{pspicture}
+
+\end{document}
