@@ -1,12 +1,11 @@
-\documentclass[t,ngerman]{beamer}
+\documentclass[t,ngerman,compress]{beamer}
 \listfiles
 \usefonttheme{professionalfonts}
 \IfFileExists{beamerthemesl-it.sty}{%
   \usetheme{sl-it}
-%  \useoutertheme{sl-split}
   \usepackage{sl-listings}
 }{%
-  \usetheme{Luebeck}
+  \usetheme{Berlin}
   \usepackage{babel}
   \usepackage{listings}
   \usepackage[overlay,absolute]{textpos}
@@ -44,11 +43,14 @@
   IEEE Student Branch Passau}
 \begin{document}
 
-\begin{frame}
-  \titlepage
+\begin{frame}[plain]
+%  \begin{textblock}{4}(0,0.2)
+%    \includegraphics[width=4cm,angle=10]{plakat}
+%  \end{textblock}
   \begin{textblock}{4}(0.67,0.4)
     \includegraphics[width=4cm]{lion}
   \end{textblock}
+  \titlepage
 \end{frame}
 
 \begin{frame}
