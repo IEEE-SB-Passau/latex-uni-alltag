@@ -119,15 +119,61 @@
     Alphabetischer Zitierstil: [Voß12], [Mit08]\dots
   \item \texttt{authoryear}\\
     Autor+Jahr Stil: Voß 2012; Mittelbach u.\,a. 2008
-  \item Zig weitere (z.\,T. als Erweiterungspakete)\\
-    JuraBib, Fußnoten etc.
+  \item Unzählige weitere (z.\,T. als Erweiterungspakete)\\
+    JuraBib, Fußnoten etc. $\Rightarrow$ CTAN
   \end{itemize}
 \end{frame}
 
 \subsection{Indexerstellung}
-\begin{frame}
+\begin{frame}[fragile]
   \frametitle{Indexerstellung}
-  
+  \begin{itemize}
+  \item (Fast) automatisch mit \texttt{makeidx}-Paket und
+    \texttt{makeindex} bzw. \texttt{xindy}
+  \item Präambel
+\begin{lstlisting}[language={[LaTeX]TeX}]
+\usepackage{makeidx}
+\makeindex
+\end{lstlisting}
+  \item Einträge hinzufügen
+\begin{lstlisting}[language={[LaTeX]TeX}]
+\index{Keyname}
+\end{lstlisting}
+  \item Darstellung des Index
+\begin{lstlisting}[language={[LaTeX]TeX}]
+\printindex
+\end{lstlisting}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Workflow}
+  Graphisch?
+  \begin{itemize}
+  \item Texterstellung, \texttt{\textbackslash index\{...\}} für
+    Einträge
+  \item Übersetzen mit \LaTeX{} (evtl. mehrmalig)
+  \item Eigentliche Indexgenerierung mit \texttt{makeindex filename}
+  \item Übersetzen mit \LaTeX{}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Erweiterte Möglichkeiten}
+  \begin{tabular}{l|l}
+    \textbf{Beispielcode} & \textbf{Darstellung}\\ \hline
+    \texttt{\textbackslash index\{Hobbit\}} & Hobbit, 1\\
+    \texttt{\textbackslash index\{Hobbit!Frodo\}} & $\quad$Frodo, 3\\
+    \texttt{\textbackslash index\{Sam@\textbackslash textsl\{Sam\}\}}
+    & \textsl{Sam}, 2\\
+    \texttt{\textbackslash index\{Gandalf|textbf\}} & Gandalf, \textbf{3}\\
+    \texttt{\textbackslash index\{ecole@\textbackslash ´ecole\}} &
+    école, 4\\
+    \texttt{\textbackslash index\{Bilbo|see\{Hobbit\}\}} & Bilbo,
+    \emph{see} Hobbit\\
+    \texttt{\textbackslash index\{Der Graue|seealso\{Gandalf\}\}} &
+    Der Graue, \emph{see also} Gandalf
+  \end{tabular}
 \end{frame}
 
 \subsection{Glossarerstellung}
