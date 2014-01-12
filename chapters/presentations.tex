@@ -51,6 +51,101 @@
   \examplefile{examples/presentations/minimal-beamer.tex}
   \lstinputlisting[language={[LaTeX]TeX}]{examples/presentations/minimal-beamer.tex}
 \end{frame}
+
+\begin{frame}
+  \frametitle{\texttt{beamer}}
+  \framesubtitle{Konzepte}
+  \begin{itemize}
+  \item Folienlayout stark modularisiert
+    \begin{itemize}
+    \item Theme, Inner Theme, Outer Theme, Color Theme, Font Theme
+    \item beliebig kombinierbar
+    \item Viele Standardthemes (siehe Doku)
+    \end{itemize}
+  \item Overlays – Überlagerung von mehreren Folien
+    \begin{itemize}
+    \item \texttt{\textbackslash pause}
+    \item \texttt{\textbackslash onslide<Overlays>\{Text\}}
+    \item \texttt{\textbackslash only<Overlays>\{Text\}}
+    \item \texttt{\textbackslash visible<Overlays>\{Text\}},
+      \texttt{\textbackslash invisible<Overlays>\{Text\}}
+    \item \texttt{\textbackslash uncover<Overlays>\{Text\}}
+    \item \texttt{\textbackslash alert<Overlays>\{Text\}}
+    \item Sparsam verwenden, lenkt oft mehr ab
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\texttt{beamer}}
+  \framesubtitle{Vordefinierte Umgebungen}
+  \texttt{theorem, corollory, definition, definitions, fact, proof,
+    example}\dots
+  \begin{columns}[T]
+    \begin{column}{.35\textwidth}
+      \setbeamertemplate{blocks}[rounded][shadow=true]
+      \setbeamercolor{block body}{bg=normal text.bg!90!black}
+      \setbeamercolor{block title}{bg=normal text.bg!90!red}
+      \setbeamercolor{block title}{parent={structure,block body}}
+      \begin{theorem}[Pythagoras]
+        \[ c^{2} = a^{2} + b^{2} \]
+      \end{theorem}
+    \end{column}
+    \begin{column}{.6\textwidth}
+\begin{lstlisting}[language={[LaTeX]TeX}]
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercolor{block body}{bg=normal text.bg!90!black}
+\setbeamercolor{block title}{bg=normal text.bg!90!red}
+\setbeamercolor{block title}{parent={structure,block body}}
+\begin{theorem}[Pythagoras]
+  \[ c^{2} = a^{2} + b^{2} \]
+\end{theorem}
+\end{lstlisting}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\texttt{beamer}}
+  \framesubtitle{Vordefinierte Umgebungen (2)}
+\begin{lstlisting}[language={[LaTeX]TeX}]
+\begin{beamercolorbox}[Optionen]{Farbe} ...
+    \end{beamercolorbox}
+\begin{beamerboxesrounded}[Optionen]{Farbe} ...
+    \end{beamerboxesrounded}
+\begin{block}<Overlays>{Kopfzeile} ... \end{block}
+\begin{block}{Kopfzeile}<Overlays> ... \end{block}
+\begin{alertblock}<Overlays>{Kopfzeile} ... \end{alertblock}
+\begin{alertblock}{Kopfzeile}<Overlays> ... \end{alertblock}
+\begin{exampleblock}<Overlays>{Kopfzeile} ...
+    \end{exampleblock}
+\begin{exampleblock}{Kopfzeile}<Overlays> ...
+    \end{exampleblock}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\texttt{beamer}}
+  \framesubtitle{Mehrspaltiger Satz}
+\begin{lstlisting}[language={[LaTeX]TeX}]
+\begin{columns}[Optionen]
+  \begin{column}[Platzierung]{Breite} ...
+      \end{column}
+  \begin{column}[Platzierung]{Breite} ...
+      \end{column}
+  ...
+\end{columns}
+\end{lstlisting}
+  Optionen für \texttt{columns}
+  
+  \begin{tabular}{ll}
+    \textbf{Name} & \textbf{Bedeutung} \\\hline
+    \texttt{b} & Unterste Basislinie der Spalten\\
+    \texttt{c} & Vertikale Zentrierung (Standard)\\
+    \texttt{t} & Basislinie der ersten Zeile\\
+    \texttt{T} & Oberkante der ersten Zeile
+  \end{tabular}
+\end{frame}
 %%% Local Variables: 
 %%% mode: latex
 %%% coding: utf-8

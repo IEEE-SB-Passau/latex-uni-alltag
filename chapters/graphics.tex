@@ -58,23 +58,32 @@
 
 \begin{frame}
   \frametitle{\texttt{graphicx}}
-  \framesubtitle{Weitere nützliche Befehle}
-  \begin{itemize}
-  \item \texttt{\textbackslash rotatebox\{angle\}\{text\}}\\
-    Rotiert \texttt{text} um Winkel \texttt{angle}
-  \item \texttt{\textbackslash
-      scalebox\{h-scale\}\{v-scale\}\{text\}}\\
-    Bietet die Möglichkeit, den \texttt{text} zu skalieren
-  \item \texttt{\textbackslash reflectbox\{text\}}\\
-    Spiegelt \texttt{text}
-  \end{itemize}
+  \framesubtitle{Beispiel}
+  \examplefile{examples/graphics/graphic.tex}
+  \fbox{\includegraphics[width=.9\textwidth]{scr-graphic}}
 \end{frame}
 
 \begin{frame}
   \frametitle{\texttt{graphicx}}
-  \framesubtitle{Beispiel}
-  \examplefile{examples/graphics/graphic.tex}
-  \fbox{\includegraphics[width=.9\textwidth]{scr-graphic}}
+  \framesubtitle{Weitere nützliche Befehle}
+  \begin{itemize}
+  \item \texttt{\textbackslash rotatebox\{angle\}\{text\}}\\
+    Rotiert \texttt{text} um Winkel \texttt{angle}
+    \begin{center}
+      \rotatebox{30}{Beispieltext}
+    \end{center}
+  \item \texttt{\textbackslash
+      resizebox\{h-scale\}\{v-scale\}\{text\}}\\
+    Bietet die Möglichkeit, den \texttt{text} zu skalieren
+    \begin{center}
+      \resizebox{1.5in}{\height}{Beispieltext}
+    \end{center}
+  \item \texttt{\textbackslash reflectbox\{text\}}\\
+    Spiegelt \texttt{text}
+    \begin{center}
+      \reflectbox{Beispieltext}
+    \end{center}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]

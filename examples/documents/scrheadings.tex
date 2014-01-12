@@ -1,0 +1,16 @@
+\documentclass[twoside]{scrartcl}
+\usepackage{scrpage2}
+\clearscrheadfoot
+\lehead{\pagemark}
+\rehead{\headmark}
+\lohead{\headmark}
+\rohead{\pagemark}
+\cefoot{Penguins!}
+\cofoot{Penguins!}
+\setheadsepline{0.2pt}
+\pagestyle{scrheadings}
+\usepackage{blindtext}
+\begin{document}
+\automark[subsection]{section}
+\Blinddocument
+\end{document}

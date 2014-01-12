@@ -175,15 +175,54 @@
   \end{tabular}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
   \frametitle{Glossarerstellung}
-  
+  \begin{itemize}
+  \item Paket \texttt{glossaries}
+    (\href{http://ctan.org/pkg/glossaries}{\texttt{CTAN://pkg/glossaries}})
+  \item In der Präambel \texttt{\textbackslash makeglossaries}
+  \item Hinzufügen von Einträgen
+\begin{lstlisting}[language={[LaTeX]TeX}]
+\newglossaryentry{computer}{
+  name=computer,
+  description={is a programmable machine...}
+}
+\end{lstlisting}
+  \item Verwendung im Dokument\\
+    \texttt{\textbackslash gls\{<label>\}}, \texttt{\textbackslash
+      glspl\{<label>\}}, \texttt{\textbackslash Gls\{<label>\}},
+    \texttt{\textbackslash Glspl\{<label>\}}, \dots
+  \item Ausgabe mit \texttt{\textbackslash printglossaries}
+  \item Mehr in der Paketdokumentation oder im Internet
+  \end{itemize}
 \end{frame}
 
 \subsection{Vorlagen und Seitengestaltung}
 \begin{frame}
   \frametitle{Vorlagen und Seitengestaltung}
-  
+  \begin{itemize}
+  \item Viele Vorlagen im Internet,
+    z.\,B. \href{http://www.latextemplates.com/}{http://www.latextemplates.com/}
+  \item Weniger ist oft mehr!
+  \item Individuelle Gestaltung oft aufwändig
+  \item Z.\,T. interne \TeX-Programmierung notwendig
+  \end{itemize}
+  $\Rightarrow$ Verwenden der Standardlayouts oder fertiger Vorlagen
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Seitengestaltung mit \texttt{scrpage2}}
+  \examplefile{examples/documents/scrheadings.tex}
+  \lstinputlisting[language={[LaTeX]TeX}]{examples/documents/scrheadings.tex}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Seitengestaltung mit \texttt{scrpage2} (2)}
+  Ausgabe der Kopfzeile
+  \fbox{\includegraphics[width=.9\textwidth]{scr-scrheadings-head}}
+
+  Ausgabe der Fußzeile
+  \fbox{\includegraphics[width=.9\textwidth]{scr-scrheadings-foot}}
 \end{frame}
 %%% Local Variables: 
 %%% mode: latex
