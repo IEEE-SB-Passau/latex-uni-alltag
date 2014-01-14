@@ -246,6 +246,49 @@ endfig;
   \end{itemize}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Ti\emph{k}Z-Beispiele}
+  \framesubtitle{Bäume}
+  \begin{columns}[T]
+    \begin{column}{.2\textwidth}
+      \includegraphics{tree-tikz}
+    \end{column}
+    \begin{column}{.8\textwidth}
+      \examplefile{examples/graphics/tree-tikz.tex}
+      \lstinputlisting[language={[LaTeX]TeX}]{examples/graphics/tree-tikz.tex}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ti\emph{k}Z-Beispiele}
+  \framesubtitle{Automaten}
+  \only<1>{%
+    \begin{center}
+      \includegraphics{automata-tikz}
+    \end{center}
+  }
+  \only<2->{%
+    \examplefile{examples/graphics/automata-tikz.tex}
+    \lstinputlisting[language={[LaTeX]TeX},firstline=2,lastline=3]{examples/graphics/automata-tikz.tex}
+    \lstinputlisting[language={[LaTeX]TeX},firstline=8,firstnumber=8,lastline=18]{examples/graphics/automata-tikz.tex}
+  }
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ti\emph{k}Z-Beispiele}
+  \framesubtitle{Entity-Relationship-Diagramme}
+  \only<1>{%
+    \begin{center}
+      \includegraphics{er-tikz}
+    \end{center}
+  }
+  \only<2->{%
+    \examplefile{examples/graphics/er-tikz.tex}
+    \lstinputlisting[language={[LaTeX]TeX}]{examples/graphics/er-tikz.tex}
+  }
+\end{frame}
+
 %%% Local Variables: 
 %%% mode: latex
 %%% coding: utf-8

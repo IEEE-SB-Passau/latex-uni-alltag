@@ -1,0 +1,11 @@
+\documentclass[tikz,convert=false]{standalone}
+\usetikzlibrary{trees}
+\begin{document}
+\begin{tikzpicture}
+  \node {root}[clockwise from=30,sibling angle=30]
+    child {node {$30$}}
+    child {node {$0$}}
+    child {node {$-30$}}
+    child {node {-60}};
+\end{tikzpicture}
+\end{document}
