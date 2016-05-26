@@ -1,0 +1,210 @@
+%%
+%% This is file `beamerthemesl-it.sty`
+%%
+%% Beamer theme for presentations of SL IT-Service
+%%
+%% Copyright (c) 2013 Stephan Lukasczyk <lukste@gaponline.de>
+%% -----------------------------------------------------------------
+%%
+%% This package may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your opinion) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained`.
+%%
+%% The Current Maintainer of this work is Stephan Lukasczyk.
+%%
+\def\ieee@filename{beamerthemesl-it.sty}
+\def\ieee@fileversion{0.1}
+\def\ieee@filedate{2013/10/11}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{beamerthemesl-it}[\ieee@filedate\space
+v\ieee@fileversion\space SL IT-Service beamer theme (sl)]
+
+%% Check if LuaTeX is used, abort otherwise
+\RequirePackage{ifluatex}
+\ifluatex
+  \RequirePackage{luacode}
+\else
+  \PackageError{beamerthemesl-it}{%
+  Theme beamerthemesl-it.sty just works with LuaTeX}{%
+  Use `luatex` or `lualatex` command}
+\fi
+
+%% Provides if switches for options
+\newif\ifsl@navmarks@
+\sl@navmarks@true
+\newif\ifsl@logo@
+\sl@logo@false
+
+%% Declare options
+\DeclareOption{nonavmarks}{%
+  \sl@navmarks@false%
+}
+\DeclareOption{logo}{%
+  \sl@logo@true
+}
+\ProcessOptions\relax
+
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+\newtheoremstyle{sl}{5pt}{5pt}{\normalfont}{\parindent}{\bfseries}{:}{1.5em}{}
+\RequirePackage{eurosym}
+\RequirePackage{calligra}
+
+%% Setting up fonts
+\RequirePackage{fontspec}
+\RequirePackage{unicode-math}
+\setmainfont[Ligatures=TeX]{Linux Libertine}
+\setsansfont[Ligatures=TeX]{Linux Biolinum}
+\setmonofont{Inconsolata for Powerline}
+\setmathfont[Ligatures=TeX]{Latin Modern Math}
+
+%% Load packages for beamer layout
+\RequirePackage{ifthen}
+\RequirePackage[overlay,absolute]{textpos}
+\RequirePackage{babel}
+
+%% Define colors
+\definecolor{slblue}{rgb}{0,0.2,0.6}
+
+%% Defining lengthes and sizes for the slides and the textpos-package
+%\setbeamersize{sidebar width right=1.5cm}
+%\setbeamercolor{sidebar right}{fg=slblue!000,bg=slblue!000}
+%\setbeamertemplate{sidebar right}{}
+\setlength\TPHorizModule{\paperwidth}
+\setlength\TPVertModule{\paperheight}
+
+%% Defining intern macros
+\def\islastslide#1#2{% Is this the last slide of frame
+  \ifnum\thepage<\beamer@endpageofframe%
+    #2%
+  \else%
+    #1%
+  \fi%
+}
+
+\newcommand<>\sl@rule{%
+  \only#1{%
+    \hbox{%
+      \color{red}%
+      \rule{.84\paperwidth}{0.2mm}%
+    }%
+  }%
+}
+\newcommand<>\sl@longrule{%
+  \only#1{%
+    \hbox{%
+      \color{red}%
+      \rule{\paperwidth}{0.2mm}%
+    }%
+  }%
+}
+
+%% Defining layout of slide types
+
+%% ==== Notes
+\setbeamerfont{notes}{size=\tiny}
+\setbeamertemplate{note page}{%
+  \usebeamerfont{notes}%
+  \insertnote%
+}
+
+%% ==== Titlepage
+\setbeamercolor{title}{fg=slblue!100,bg=white}
+\setbeamerfont{title}{series=\bfseries,size=\LARGE}
+\setbeamercolor{title author}{fg=black!100,bg=white}
+\setbeamercolor{title date}{fg=black!100,bg=white}
+\setbeamerfont{title date}{series=\bfseries}
+
+%% ==== Standard slide
+\setbeamersize{text margin right=0.1cm}
+\setbeamerfont{section in head/foot}{size=\tiny}
+\setbeamercolor{frametitle box}{bg=white!100,fg=slblue!100}
+\setbeamercolor{frametitle title}{bg=white!100,fg=slblue!100}
+\setbeamercolor{section in head/foot}{bg=white!100,fg=slblue!100}
+\setbeamercolor{subsection in head/foot}{bg=white!100,fg=slblue!100}
+\setbeamertemplate{frametitle}{%
+  \vspace{-0.1cm}
+  \begin{beamercolorbox}[sep=12pt,ht=1.3cm,dp=0pt,%
+      wd=\paperwidth]{frametitle box}%
+    \hbox{%
+      \begin{minipage}[b]{\paperwidth}%
+        {\Large\insertframetitle}%
+        \ifx\insertframesubtitle\@empty%
+          \strut\par%
+        \else%
+          \par\vspace{-1ex}{\normalsize\insertframesubtitle}\vspace{-1ex}%
+        \fi%
+      \end{minipage}%
+    }%
+  \end{beamercolorbox}%
+  \vspace{-3ex}\sl@rule
+}
+\setbeamertemplate{headline}{%
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+  \end{beamercolorbox}
+}
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[circle]
+\setbeamertemplate{enumerate item}[circle]
+\setbeamertemplate{enumerate subitem}[circle]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{foot section}{fg=black!100,bg=yellow!00}
+\setbeamercolor{foot pagenr}{fg=white!100,bg=white!100}
+\setbeamercolor{foot pagenr last}{fg=green!100,bg=white!100}
+\setbeamercolor{foot titel}{fg=black!100,bg=yellow!00}
+\setbeamercolor{foot line}{fg=slblue!100,bg=white!00}
+\setbeamertemplate{footline}{%
+  \begin{beamercolorbox}{foot line}%
+    \ifsl@logo@% option logo given
+      \sl@rule%
+    \else%
+      \sl@longrule%
+    \fi%
+  \end{beamercolorbox}%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.422\paperwidth,ht=3ex,dp=1ex,%
+        leftskip=0.1cm]{foot section}%
+      \vspace{-0.15ex}
+      \insertauthor – \inserttitle%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.422\paperwidth,ht=3ex,dp=1ex,%
+        right]{foot section}%
+      \ifsl@navmarks@%
+        \insertslidenavigationsymbol%
+        \insertframenavigationsymbol%
+        \insertsubsectionnavigationsymbol%
+        \insertsectionnavigationsymbol%
+        \insertdocnavigationsymbol%
+        \insertbackfindforwardnavigationsymbol%
+      \fi%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=2cm,ht=3ex,dp=1ex,center]%
+          {foot section}%
+      \ifsl@logo@%
+        \includegraphics[width=2cm]{logo}\vspace{-2ex}
+      \fi
+      \islastslide{{%
+        \color{red}%
+        \insertframenumber/\inserttotalframenumber%
+      }}{{%
+        \color{black}%
+        \insertframenumber/\inserttotalframenumber%
+      }}%
+      \vfill%
+    \end{beamercolorbox}%
+  }
+}
+
+%% ==== Table of contents
+\setbeamercolor{section in toc}{fg=black!100}
+
+\endinput

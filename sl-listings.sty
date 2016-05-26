@@ -1,0 +1,64 @@
+%%
+%% sl-listings.sty
+%%
+%% Provides a wrapper class of listings with personal settings
+%% Adapted by a document of Herbert Voss and an example of Uwe
+%% Ziegenhagen
+%% Also the code for providing a highlighting for diff-files is from
+%% http://tex.stackexchange.com/a/106129/14622
+%%
+%% Created 2011-2013 Stephan Lukasczyk <lukste@gaponline.de>
+%%
+%% This work is licensed under a Creative Commons
+%% Attribution-ShareAlike 3.0 Germany License
+%% See https://creativecommons.org/licenses/by-sa/3.0/de/deed.en_US
+%% for license text
+%%
+
+\message{Customized wrapper of listings-package v0.3 2012/12/22 (sl)}
+\ProvidesPackage{sl-listings}[2012/12/22 v0.3 (sl)]
+\NeedsTeXFormat{LaTeX2e}[2001/06/01]
+
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+
+\definecolor{hellgelb}{rgb}{1,1,0.8}
+\definecolor{colKeys}{rgb}{0,0,1}
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{1,0,0}
+\definecolor{colString}{rgb}{0,0.5,0}
+\definecolor{diffStart}{rgb}{0.3,0.3,0.3}
+\definecolor{diffIncl}{rgb}{0,0.9,0}
+\definecolor{diffRem}{rgb}{1,0,0}
+
+\lstset{%
+  float=hbp,%
+  basicstyle=\ttfamily\footnotesize,%
+  identifierstyle=\color{colIdentifier},%
+  keywordstyle=\color{colKeys},%
+  stringstyle=\color{colString},%
+  commentstyle=\color{colComments},%
+  columns=flexible,%
+  tabsize=4,%
+  frame=single,%
+  extendedchars=true,%
+  showspaces=false,%
+  showstringspaces=false,%
+  numbers=left,%
+  numberstyle=\tiny,%
+  breaklines=true,%
+  backgroundcolor=\color{hellgelb},%
+  breakautoindent=true,%
+  captionpos=t,%
+%  linewidth=.9\linewidth,%
+  xleftmargin=.075\linewidth,%
+  xrightmargin=.075\linewidth%
+}
+
+\lstdefinelanguage{diff}{%
+  morecomment=[f][\color{diffStart}]{@@},
+  morecomment=[f][\color{diffIncl}]{+\ },
+  morecomment=[f][\color{diffRem}]{-\ },
+}
+
+\endinput
