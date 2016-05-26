@@ -1,14 +1,12 @@
-# LaTeX im Uni-Alltag
-## Ein „kleiner“ Überblick
+# LaTeX im Uni-Alltag – Ein „kleiner“ Überblick
 
 Dieses Repository enthält alle Dateien zum Vortrag »LaTeX im Uni-Alltag – Ein
 „kleiner“ Überblick«, gehalten von Stephan Lukasczyk am 15. Januar 2014 für die
 IEEE Student Branch Passau and der Universität Passau. Ein entsprechender
-Beitrag findet sich auf der Homepage der
-[https://ieee.uni-passau.de/de/event/latex-im-uni-alltag-ein-kleiner-ueberblick](Student
-Branch).
+Beitrag findet sich auf der [Homepage der IEEE Student Branch
+Passau](https://ieee.uni-passau.de/de/event/latex-im-uni-alltag-ein-kleiner-ueberblick).
 
-### Übersetzung der Dateien
+## Übersetzung der Dateien
 
 Das Repository enthält (hoffentlich) alle benötigten Dateien. Zusätzlich werden
 die Font »Linux Libertine«. »Linux Biolinum«, »Latin Modern Math« und
@@ -25,8 +23,9 @@ Getestet wurde die Übersetzung mit TeX Live 2013 (beim Erstellen der
 Präsentation), sowie mit TeX Live 2015 (vor dem Umzug des Repositories zur IEEE
 Student Branch Passau).
 
-### Lizenz
+## Lizenz
 
 Der gesamte Inhalt ist – soweit nicht anders gekennzeichnet – lizenziert unter
-[https://creativecommons.org/licenses/by-sa/3.0/de/deed.en_US](Creative Commons
-Attribution-ShareAlike 3.0 Germany License) durch Stephan Lukasczyk.
+[Creative Commons Attribution-ShareAlike 3.0 Germany
+License](https://creativecommons.org/licenses/by-sa/3.0/de/deed.en_US) durch
+Stephan Lukasczyk.
